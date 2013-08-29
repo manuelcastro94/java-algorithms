@@ -4,7 +4,9 @@ import anaydis.sort.data.DataSetGenerator;
 import anaydis.sort.provider.SorterProvider;
 import anaydis.sort.test.AbstractTestPracticaDos;
 
-public class TestPracticaDos extends AbstractTestPracticaDos {
+public class
+
+        TestPracticaDos extends AbstractTestPracticaDos {
 
     @Override protected DataSetGenerator<String> getStringDataSetGenerator() {
         throw new IllegalStateException("To be implemented!");
