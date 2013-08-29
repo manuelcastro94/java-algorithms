@@ -23,11 +23,11 @@ public class SelectionSort extends AbstractSorter {
         int n = list.size();
         for(int i = 0;i<n;i++){
             int min = i;
-            for(int j = i+1;j<n;j++)
-                if(greater(comparator,list,min,j))
+            for(int j = i+1;j<n;j++){
+                if(greater(comparator,list,min,j)){
                     min = j;
-
-
+                }
+            }
             swap(list,i,min);
         }
     }

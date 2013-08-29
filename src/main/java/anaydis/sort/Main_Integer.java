@@ -13,11 +13,9 @@ public class Main_Integer {
 
     public static void main(String[] args) {
         IntegerDataSetGenerator integerDataSetGenerator = new IntegerDataSetGenerator();
-        List list = integerDataSetGenerator.createRandom(15);
+        List list = integerDataSetGenerator.createRandom(100);
         System.out.println(list);
         Listener p = new Listener();
-
-
         InsertionSort sorter = new InsertionSort();
         //BubbleSort sorter = new BubbleSort();
         //SelectionSort sorter = new SelectionSort();

@@ -16,18 +16,20 @@ import java.util.List;
 public class Main_String {
     public static void main(String[] args) {
         FullNameDataSetGenerator fullNameDataSetGenerator = new FullNameDataSetGenerator();
-        List list = new ArrayList();
-        list.add(new FullName("Alonso","Paula"));
-        list.add(new FullName("Diaz","Diego"));
-        list.add(new FullName("Alonso","Diego"));
-        list.add(new FullName("Diaz","Beto"));
-        list.add(new FullName("Cobain","Kurt"));
-        list.add(new FullName("Cernello","Manuel"));
-        list.add(new FullName("Alonso","Guido"));
+        List list = fullNameDataSetGenerator.createRandom(6);
         System.out.println(list);
+        /*
+         se eligio el insertion sort porque es un algoritmo estable
+         */
         InsertionSort sorter = new InsertionSort();
         //SelectionSort sorter = new SelectionSort();
         //BubbleSort sorter = new BubbleSort();
+        Comparator<FullName> comp2 = new Comparator<FullName>() {
+            @Override
+            public int compare(FullName o1, FullName o2) {
+                return o1.getLastname().compareTo(o2.getLastname());
+            }
+        };
         final Comparator<FullName> comp = new Comparator<FullName>() {
             @Override
             public int compare(FullName s1, FullName s2) {
@@ -35,19 +37,9 @@ public class Main_String {
             }
         };
 
-
-        Comparator<FullName> comp2 = new Comparator<FullName>() {
-            @Override
-            public int compare(FullName o1, FullName o2) {
-                return o1.getLastname().compareTo(o2.getLastname());
-            }
-        };
-
-
         sorter.sort(comp2,list);
         System.out.println(list);
         sorter.sort(comp,list);
-
         System.out.println(list);
     }
 }

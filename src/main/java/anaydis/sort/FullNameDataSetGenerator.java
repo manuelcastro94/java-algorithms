@@ -34,10 +34,8 @@ public class FullNameDataSetGenerator implements DataSetGenerator<String> {
 
         final List<FullName> copy = new ArrayList<FullName>();
         for(int i = 0;i<length;i++){
-            int random1 = (int)(Math.random()* lnameDictionary.size());
-            int random2 = (int)(Math.random()* fnameDictionary.size());
-
-            copy.add(i,new FullName(fnameDictionary.get(random2), lnameDictionary.get(random1)));
+            int j = (int)(Math.random()*lnameDictionary.size());
+            copy.add(i,new FullName(lnameDictionary.get(j), fnameDictionary.get(i)));
         }
         return copy;
 
@@ -70,12 +68,12 @@ public class FullNameDataSetGenerator implements DataSetGenerator<String> {
 
     private List<String> initFirstNameDictionary()
     {
-        return  Arrays.asList("PAULA","DIEGO","DIEGO");
+        return  Arrays.asList("PAULA","DIEGO","DIEGO","FELIPE","MARIA","RICARDO","DAVID");
     }
 
     private List<String> initLastNameDictionary(){
 
-         return Arrays.asList("ALONSO","DIAZ","ALONSO");
+         return Arrays.asList("ALONSO","DIAZ","CASTRO");
 
     }
 
