@@ -3,6 +3,7 @@ package anaydis_main;
 import anaydis.sort.FullName;
 import anaydis.sort.FullNameDataSetGenerator;
 import anaydis.sort.InsertionSort;
+import anaydis.sort.QuickSort;
 import anaydis.sort.data.StringDataSetGenerator;
 
 import java.util.ArrayList;
@@ -24,9 +25,10 @@ public class Main_String {
         /*
          se eligio el insertion sort porque es un algoritmo estable
          */
-        InsertionSort sorter = new InsertionSort();
+        //InsertionSort sorter = new InsertionSort();
         //SelectionSort sorter = new SelectionSort();
         //BubbleSort sorter = new BubbleSort();
+        QuickSort sorter = new QuickSort();
         Comparator<FullName> comp2 = new Comparator<FullName>() {
             @Override
             public int compare(FullName o1, FullName o2) {
