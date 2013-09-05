@@ -13,25 +13,25 @@ public class Main_Integer {
 
     public static void main(String[] args) {
         IntegerDataSetGenerator integerDataSetGenerator = new IntegerDataSetGenerator();
-        List list = integerDataSetGenerator.createDescending(1000);
+        List list = integerDataSetGenerator.createRandom(10);
         System.out.println(list);
         Listener p = new Listener();
-        Shellsort sorter = new Shellsort();
-        //QuickSort sorter = new QuickSort();
+        //Shellsort sorter = new Shellsort();
+        QuickSort sorter = new QuickSort();
         //HSort sorter = new HSort();
         //InsertionSort sorter = new InsertionSort();
         //BubbleSort sorter = new BubbleSort();
         //SelectionSort sorter = new SelectionSort();
-        //quickSort.addSorterListener(p);
+        sorter.addSorterListener(p);
         long tiempoInicio = System.currentTimeMillis();
         sorter.sort(integerDataSetGenerator.getComparator(), list);
 
         long tiempoFinal = (System.currentTimeMillis() - tiempoInicio);
         System.out.println(list);
-        /*System.out.println("Greater: "+p.getGreaterCounter()+" / ");
+        System.out.println("Greater: "+p.getGreaterCounter()+" / ");
         System.out.println("swap: "+p.getSwapCounter()+" / ");
         System.out.println("tiempo: "+tiempoFinal + " MiliSegundos");
-        */
+
     }
 
 }

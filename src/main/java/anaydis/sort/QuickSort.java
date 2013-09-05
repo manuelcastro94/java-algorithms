@@ -20,7 +20,7 @@ public class QuickSort extends AbstractSorter implements Sorter {
 
     @Override
     public <T> void sort(@NotNull Comparator<T> comparator, @NotNull List<T> list) {
-        sort(list,comparator,1,list.size()-1);
+        sort(list,comparator,0,list.size()-1);
     }
 
     private <T> int partition(List<T> l,Comparator<T> comparator,int lo, int hi){
@@ -28,16 +28,16 @@ public class QuickSort extends AbstractSorter implements Sorter {
         int j = hi;
         while(true){
 
-            while(greater(comparator,l,lo,i++)) if(i==hi) break;
-            while(greater(comparator,l,j,lo)) if(j==lo) break;
+            while(!greater(comparator,l,++i,hi)) if(i==hi) break;
+            while(!greater(comparator,l,hi,--j)) if(j==lo) break;
             if(i>=j) break;
             swap(l,i,j);
         }
-        swap(l,lo,j);
+        swap(l,i,hi);
         System.out.println(l);
 
 
-        return j;
+        return i;
 
 
     }
