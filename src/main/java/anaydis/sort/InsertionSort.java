@@ -27,7 +27,7 @@ import java.util.List;
  */
 public class InsertionSort extends AbstractSorter {
 
-    protected InsertionSort() {
+    public InsertionSort() {
         super(SorterType.INSERTION);
     }
 

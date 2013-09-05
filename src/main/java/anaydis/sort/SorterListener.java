@@ -1,5 +1,7 @@
 package anaydis.sort;
 
+import java.util.List;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Manu
@@ -11,5 +13,6 @@ public interface SorterListener {
 
     void greater(int i, int j);
     void swap(int i, int j);
+
 
 }

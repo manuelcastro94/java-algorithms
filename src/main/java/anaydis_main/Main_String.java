@@ -1,5 +1,8 @@
-package anaydis.sort;
+package anaydis_main;
 
+import anaydis.sort.FullName;
+import anaydis.sort.FullNameDataSetGenerator;
+import anaydis.sort.InsertionSort;
 import anaydis.sort.data.StringDataSetGenerator;
 
 import java.util.ArrayList;

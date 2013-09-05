@@ -31,7 +31,7 @@ import java.util.List;
  */
 public class BubbleSort extends AbstractSorter implements Sorter {
 
-    protected BubbleSort() {
+    public BubbleSort() {
         super(SorterType.BUBBLE);
     }
 

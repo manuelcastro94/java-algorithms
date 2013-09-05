@@ -14,7 +14,7 @@ import java.util.List;
  */
 public class SelectionSort extends AbstractSorter {
 
-    protected SelectionSort() {
+    public SelectionSort() {
         super(SorterType.SELECTION);
     }
 
