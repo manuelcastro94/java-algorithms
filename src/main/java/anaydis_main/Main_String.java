@@ -1,9 +1,6 @@
 package anaydis_main;
 
-import anaydis.sort.FullName;
-import anaydis.sort.FullNameDataSetGenerator;
-import anaydis.sort.InsertionSort;
-import anaydis.sort.QuickSort;
+import anaydis.sort.*;
 import anaydis.sort.data.StringDataSetGenerator;
 
 import java.util.ArrayList;
@@ -21,14 +18,15 @@ public class Main_String {
     public static void main(String[] args) {
         FullNameDataSetGenerator fullNameDataSetGenerator = new FullNameDataSetGenerator();
         List list = fullNameDataSetGenerator.createRandom(6);
-        System.out.println(list);
+        System.out.println("Lista desordenada: "+list);
         /*
          se eligio el insertion sort porque es un algoritmo estable
          */
+        Shellsort_extending sorter = new Shellsort_extending();
         //InsertionSort sorter = new InsertionSort();
         //SelectionSort sorter = new SelectionSort();
         //BubbleSort sorter = new BubbleSort();
-        QuickSort sorter = new QuickSort();
+        //QuickSort sorter = new QuickSort();
         Comparator<FullName> comp2 = new Comparator<FullName>() {
             @Override
             public int compare(FullName o1, FullName o2) {
@@ -43,8 +41,9 @@ public class Main_String {
         };
 
         sorter.sort(comp2,list);
+        System.out.println("Lista ordenada alfabeticamente por nombre: " + list);
         System.out.println(list);
-        sorter.sort(comp,list);
-        System.out.println(list);
+        sorter.sort(comp, list);
+        System.out.println("Lista odenada por apellido: "+list);
     }
 }

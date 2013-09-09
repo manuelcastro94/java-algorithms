@@ -34,8 +34,6 @@ public class QuickSort extends AbstractSorter implements Sorter {
             swap(l,i,j);
         }
         swap(l,i,hi);
-        System.out.println(l);
-
 
         return i;
 

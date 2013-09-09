@@ -12,7 +12,7 @@ import java.util.List;
  * Time: 10:21
  * To change this template use File | Settings | File Templates.
  */
-public class HSort extends AbstractSorter implements Sorter {
+public class HSort extends AbstractSorter {
 
     public HSort() {
         super(SorterType.H);

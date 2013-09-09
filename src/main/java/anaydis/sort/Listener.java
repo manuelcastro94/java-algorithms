@@ -28,10 +28,12 @@ public class Listener implements SorterListener {
     }
 
     public int getGreaterCounter(){
+        System.out.println("Greater: " + greaterCounter);
         return greaterCounter;
     }
 
     public int getSwapCounter(){
+        System.out.println("Swaps: " + swapCounter);
         return swapCounter;
     }
 }

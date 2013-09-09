@@ -7,35 +7,31 @@ import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
- * User: Manu    lista de h! la imp
- * Date: 03/09/13
- * Time: 11:20
+ * User: Manu
+ * Date: 07/09/13
+ * Time: 18:33
  * To change this template use File | Settings | File Templates.
  */
-public class Shellsort extends AbstractSorter {
+public class Shellsort_extending extends HSort implements Sorter{
 
-    private HSort hSort;
+    private SorterType sorterType;
 
-    public Shellsort() {
-        super(SorterType.SHELL);
-        hSort = new HSort();
+    public Shellsort_extending() {
+        this.sorterType = SorterType.SHELL;
     }
 
     @Override
     public <T> void sort(@NotNull Comparator<T> comparator, @NotNull List<T> list) {
-        int n = list.size();
-        int hs[] = {9841,3280,1093,364,121,40,13,4,1};
+
+        int hs[] = {16577,4193,1073,281,77,23,8,1};
+        //int hs[] = {1,4,13,40,121,364,1093,3280,9841}
         for(int k = 0;k<hs.length;k++){
             int h = hs[k];
             if(h>=1){
-                hSort.sort(comparator, list,h);
+                sort(comparator, list,h);
+
             }
-
         }
-    }
-
-    public HSort gethSort(){
-        return hSort;
     }
 
 }

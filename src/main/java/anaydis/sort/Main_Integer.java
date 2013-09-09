@@ -16,7 +16,8 @@ public class Main_Integer {
         List list = integerDataSetGenerator.createRandom(10);
         System.out.println(list);
         Listener p = new Listener();
-        //Shellsort sorter = new Shellsort();
+        //Shellsort_extending sorter = new Shellsort_extending();
+
         QuickSort sorter = new QuickSort();
         //HSort sorter = new HSort();
         //InsertionSort sorter = new InsertionSort();
