@@ -1,4 +1,8 @@
-package anaydis.sort;
+package anaydis.sort.tp3;
+
+import anaydis.sort.IntegerListener;
+import anaydis.sort.tp2.IntegerDataSetGenerator;
+import anaydis.sort.Shellsort_extending;
 
 import java.util.List;
 
@@ -18,7 +22,7 @@ public class HCompare {
         IntegerDataSetGenerator integerDataSetGenerator = new IntegerDataSetGenerator();
         List list = integerDataSetGenerator.createRandom(10000);
         System.out.println(list);
-        Listener listener = new Listener();
+        IntegerListener listener = new IntegerListener();
         //sorter.gethSort().addSorterListener(listener);
         sorter.addSorterListener(listener);
         long initialTime = System.currentTimeMillis();

@@ -1,6 +1,7 @@
-package anaydis.sort;
+package anaydis.sort.tp2;
 
 import anaydis.sort.data.DataSetGenerator;
+import anaydis.sort.tp2.FullName;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.*;

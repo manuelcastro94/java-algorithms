@@ -1,4 +1,4 @@
-package anaydis.sort;
+package anaydis.sort.tp2;
 
 /**
  * Created with IntelliJ IDEA.

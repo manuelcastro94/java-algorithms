@@ -1,9 +1,9 @@
-package anaydis_main;
+package anaydis.sort.tp2;
 
 import anaydis.sort.*;
-import anaydis.sort.data.StringDataSetGenerator;
+import anaydis.sort.tp2.FullName;
+import anaydis.sort.tp2.FullNameDataSetGenerator;
 
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 

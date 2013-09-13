@@ -7,12 +7,12 @@ package anaydis.sort;
  * Time: 10:38
  * To change this template use File | Settings | File Templates.
  */
-public class Listener implements SorterListener {
+public class IntegerListener implements SorterListener {
 
     private int greaterCounter;
     private int swapCounter;
 
-    public Listener(){
+    public IntegerListener(){
         greaterCounter = 0;
         swapCounter = 0;
     }

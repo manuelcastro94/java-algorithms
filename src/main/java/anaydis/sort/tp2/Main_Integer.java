@@ -1,4 +1,7 @@
-package anaydis.sort;
+package anaydis.sort.tp2;
+
+import anaydis.sort.IntegerListener;
+import anaydis.sort.QuickSort;
 
 import java.util.List;
 
@@ -15,7 +18,7 @@ public class Main_Integer {
         IntegerDataSetGenerator integerDataSetGenerator = new IntegerDataSetGenerator();
         List list = integerDataSetGenerator.createRandom(10);
         System.out.println(list);
-        Listener p = new Listener();
+        IntegerListener p = new IntegerListener();
         //Shellsort_extending sorter = new Shellsort_extending();
 
         QuickSort sorter = new QuickSort();

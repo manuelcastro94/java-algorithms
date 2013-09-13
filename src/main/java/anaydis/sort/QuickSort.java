@@ -34,16 +34,12 @@ public class QuickSort extends AbstractSorter implements Sorter {
             swap(l,i,j);
         }
         swap(l,i,hi);
-
         return i;
-
-
     }
     private <T> void sort(List<T> l,Comparator<T> comparator,int lo, int hi){
         if(hi<=lo) return;
         int i = partition(l,comparator,lo,hi);
-
-        sort(l, comparator, lo, i - 1);
+        sort(l, comparator, lo, i-1);
         sort(l,comparator,i+1,hi);
     }
 

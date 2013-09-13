@@ -1,4 +1,4 @@
-package anaydis.sort;
+package anaydis.sort.tp2;
 
 import anaydis.sort.data.DataSetGenerator;
 import org.jetbrains.annotations.NotNull;
