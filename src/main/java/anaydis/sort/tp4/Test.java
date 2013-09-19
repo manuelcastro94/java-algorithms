@@ -12,6 +12,9 @@ import anaydis.sort.*;
 public class Test {
     public static void main(String[] args) {
         TestSorterTypes testSorterTypes = new TestSorterTypes();
-        testSorterTypes.testRandom(new MergeTopDown(),6);
+        //testSorterTypes.testQuickCut(new Quicksort_Cutoff(),100000);
+        //testSorterTypes.testRandom(new QuickSort3Way(),100000);
+        testSorterTypes.testRandom(new MergeTopDown(),5000);
+
     }
 }

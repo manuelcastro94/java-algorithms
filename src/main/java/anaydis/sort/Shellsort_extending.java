@@ -17,7 +17,7 @@ public class Shellsort_extending extends HSort implements Sorter{
     private SorterType sorterType;
 
     public Shellsort_extending() {
-        this.sorterType = SorterType.SHELL;
+        super(SorterType.SHELL);
     }
 
     @Override

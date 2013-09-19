@@ -16,24 +16,26 @@ import java.util.List;
 public class Quicksort_Cutoff extends QuickSort {
 
     private InsertionSort insertionSort;
-    private SorterType type;
 
     public Quicksort_Cutoff() {
-        this.type = SorterType.QUICK_CUT;
+        super(SorterType.QUICK_CUT);
         insertionSort = new InsertionSort();
     }
 
     @Override
     public <T> void sort(@NotNull Comparator<T> comparator, @NotNull List<T> list) {
-        sort(list,comparator,0,list.size()-1,0);
+        sort(list,comparator,0,list.size()-1,14);
+        insertionSort.sort(comparator,list);
     }
 
     private <T> void sort(List<T> l,Comparator<T> comparator,int lo, int hi,int m){
-        if(hi<=lo+m){
-            insertionSort.sort(comparator,l);
+        if(hi-lo<=m){
             return;
         }
-        super.sort(comparator,l);
+        int i = partition(l,comparator,lo,hi);
+        sort(l,comparator,lo,i-1,m);
+        sort(l,comparator,i+1,hi,m);
+
     }
 
     public InsertionSort getInsertionSort(){

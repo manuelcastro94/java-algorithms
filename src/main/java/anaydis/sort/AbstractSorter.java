@@ -1,5 +1,7 @@
 package anaydis.sort;
 
+import anaydis.sort.gui.ObservableSorter;
+import anaydis.sort.gui.SorterListener;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;

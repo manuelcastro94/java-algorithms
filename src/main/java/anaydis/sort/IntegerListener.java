@@ -1,5 +1,7 @@
 package anaydis.sort;
 
+import anaydis.sort.gui.SorterListener;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Manu
@@ -15,6 +17,21 @@ public class IntegerListener implements SorterListener {
     public IntegerListener(){
         greaterCounter = 0;
         swapCounter = 0;
+    }
+
+    @Override
+    public void box(int from, int to) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void copy(int from, int to, boolean copyToAux) {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
+
+    @Override
+    public void equals(int i, int j) {
+        //To change body of implemented methods use File | Settings | File Templates.
     }
 
     @Override

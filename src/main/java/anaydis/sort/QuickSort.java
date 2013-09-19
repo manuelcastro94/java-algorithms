@@ -12,10 +12,14 @@ import java.util.List;
  * Time: 10:20
  * To change this template use File | Settings | File Templates.
  */
-public class QuickSort extends AbstractSorter implements Sorter {
+public class QuickSort extends AbstractSorter implements Sorter{
 
     public QuickSort() {
         super(SorterType.QUICK);
+    }
+
+    public QuickSort(SorterType type){
+        super(type);
     }
 
     @Override
@@ -23,20 +27,25 @@ public class QuickSort extends AbstractSorter implements Sorter {
         sort(list,comparator,0,list.size()-1);
     }
 
-    private <T> int partition(List<T> l,Comparator<T> comparator,int lo, int hi){
-        int i = lo-1;
+    protected <T> int partition(List<T> l,Comparator<T> comparator,int lo, int hi){
+        int i = lo;
         int j = hi;
-        while(true){
-
-            while(!greater(comparator,l,++i,hi)) if(i==hi) break;
-            while(!greater(comparator,l,hi,--j)) if(j==lo) break;
-            if(i>=j) break;
+        while(i<j){
+            while(!greater(comparator,l,i,hi)){
+                ++i;
+                if(i==hi) break;
+            }
+            while(!greater(comparator,l,hi,j)){
+                --j;
+                if(j==lo) break;
+            }
+            if(i>j) break;
             swap(l,i,j);
         }
         swap(l,i,hi);
         return i;
     }
-    private <T> void sort(List<T> l,Comparator<T> comparator,int lo, int hi){
+    protected <T> void sort(List<T> l,Comparator<T> comparator,int lo, int hi){
         if(hi<=lo) return;
         int i = partition(l,comparator,lo,hi);
         sort(l, comparator, lo, i-1);

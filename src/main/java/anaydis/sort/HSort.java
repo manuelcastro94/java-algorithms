@@ -18,6 +18,10 @@ public class HSort extends AbstractSorter {
         super(SorterType.H);
     }
 
+    public HSort(SorterType type){
+        super(type);
+    }
+
     @Override
     public <T> void sort(@NotNull Comparator<T> comparator, @NotNull List<T> list) {
         sort(comparator, list,1);
